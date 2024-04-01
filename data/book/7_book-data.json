@@ -1,0 +1,15 @@
+[
+    {
+        "book-id": "7",
+        "book-path": "/book-src/7.md",
+        "book-title": "cvbn",
+        "chapter-id": "767",
+        "chapter-name": "cnvbnc",
+        "character-id": "sdfrt4",
+        "character-name": "bvnc",
+        "character-path": "../characters/character-src/sdfrt4.json",
+        "location-1": "Titan",
+        "location-2": "Soltra Patera",
+        "location-3": "Kasatka Bay"
+    }
+]

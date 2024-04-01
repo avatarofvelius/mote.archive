@@ -22,7 +22,7 @@ func greeting() {
 }
 
 func getJSON(w http.ResponseWriter, r *http.Request) {
-	file, err := os.ReadFile("./7_book-data.json")
+	file, err := os.ReadFile("./data/book/7_book-data.json")
 
 	var payload map[string]interface{}
 	_ = json.Unmarshal(file, &payload)
@@ -44,9 +44,3 @@ func main() {
 
 	log.Fatal(http.ListenAndServe("localhost:3000", nil))
 }
-
-/*
-	log.Printf("origin: %s\n", payload["origin"])
-	log.Printf("user: %s\n", payload["user"])
-	log.Printf("status: %t\n", payload["active"])
-*/
