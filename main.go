@@ -15,8 +15,8 @@ import (
 func greeting() {
 	fmt.Println("http://Mote.Archive/Dae")
 	fmt.Println("Welcome to the Archivist Mote.")
-	fmt.Println("-----------------------------------------------------------")
-	fmt.Println("options: /home :: /motes :: /static/json :: ")
+	fmt.Println("------------------------------")
+	fmt.Println("options: /home :: /motes")
 	fmt.Println()
 	fmt.Println("[:Dae-W:] :: Listening on Port 3000...")
 }
