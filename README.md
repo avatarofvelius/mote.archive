@@ -1,12 +1,18 @@
 # Mote.Archive
 
-## Why :
- Version of R3D_Flask ans j_mp repository backends.
 
 ## What :
- Written in go
- Providing API and Local HTTP Server for Distributing to Hosted Clients
+- Written in go
+- Local HTTP Server for Internal Tools
+- Providing API for Distributing to Hosted Clients
+
+## Why :
+- Updated Project Idea based on R3D_Flask and j_mp repository backends.
+
+- Tools for Generating Json and Yaml Files For Book and Character Metadata
+- Local Http Server for Consolidating and Managing Data Between Obsidian and Hosting Platform
+
 
 ## Uses
-- chi ( maybe )
+- ???
 - others
