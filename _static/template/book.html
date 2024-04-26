@@ -1,0 +1,82 @@
+{{ define "title" }} Archive.Book Form {{ end }}
+
+{{define "content"}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Book Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+
+<body>
+<main class="container">
+
+    <nav>
+        <ul>
+            <li><strong>Archive</strong></li>
+        </ul>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Writer</a></li>
+            <li><a href="#">Books</a></li>
+            <li><a href="#">Characters</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <article>
+        <form method="post" action="/htdocs/pform/books/book_json.php">
+
+        <label>Book Information</label>  
+        <fieldset class="grid">  
+        <input name="book-id" placeholder="Book ID">
+        <input name="book-title" placeholder="Book Title">
+        </fieldset>
+
+        <label>Chapters</label>
+        <fieldset class="grid">
+            <input name="chapter-id" placeholder="Chapter ID">     
+            <input name="chapter-name" placeholder="Chapter Name">
+        </fieldset> 
+            <input type="button" class="outline" name="add-chapter" value="Add Chapter">     
+
+        <label>Character Information</label>
+        <fieldset class="grid">
+            <input name="character-id" placeholder="AA-A-##-###">
+            <input name="character-name" placeholder="Character Name">
+        </fieldset>
+        <fieldset class="grid">
+            <input type="button"  class="outline" name="add-character" value="Add Character">
+        </fieldset>
+
+        <label>Location</label>
+        <fieldset class="grid">
+            <select name="location-1">
+                <option selected disabled value="">Celestial Body</option>
+                <option>Titan</option>
+            </select>
+            <select name="location-2">
+                <option selected disabled value="">Region</option>
+                <option>Soltra Patera</option>
+            </select>
+            <select name="location-3">
+                <option selected disabled value="">Urban Area</option>
+                <option>Kasatka Bay</option>
+            </select>
+        </fieldset>
+
+        <input type="Submit" value="Update">   
+
+        </form>
+    </article>
+
+</main>
+</body>
+</html>
+{{end}}

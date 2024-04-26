@@ -1,0 +1,100 @@
+{{ define "title" }} Archive.Character Form {{ end }}
+
+{{define "content"}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Character Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+
+<body>
+<main class="container">
+
+    <nav>
+        <ul>
+            <li><strong>Archive</strong></li>
+        </ul>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Writer</a></li>
+            <li><a href="#">Books</a></li>
+            <li><a href="#">Characters</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <article>
+        <form method="post" action="/htdocs/pform/characters/character_json.php">
+
+        <label>Identification</label>            
+        <fieldset class="grid">
+            <input name="initials" placeholder="AA">
+            <input name="person" placeholder="##">
+            <input name="number" placeholder="###">
+            <select name="type">
+                <option selected disabled value="">Select</option>
+                <option>Biological</option>
+                <option>Mechanical</option>
+                <option>Hybrid</option>
+            </select>
+        </fieldset>
+          
+        <fieldset class="grid">
+            <input name="first" placeholder="First name">
+            <input name="last" placeholder="Last Name">
+        </fieldset>
+
+        <fieldset class="grid">
+            <select name="ethnicity">
+                <option selected disabled value="">Ethnicity</option>
+                <option>Swedish</option>
+                <option>Danish</option>
+                <option>Korean</option>
+            </select>
+            <select name="gender">
+                <option selected disabled value="">Gender</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Unassigned</option>
+            </select>  
+        </fieldset>
+
+        <fieldset class="grid">
+            <input type="file" name="portrait">     
+            <input type="date" name="date">     
+        </fieldset>
+
+        <label>Location</label>
+        <fieldset class="grid">
+            <select name="celestial">
+                <option selected disabled value="">Celestial Body</option>
+                <option>Titan</option>
+            </select>
+            <select name="region">
+                <option selected disabled value="">Region</option>
+                <option>Soltra Patera</option>
+            </select>
+            <select name="area">
+                <option selected disabled value="">Urban Area</option>
+                <option>Kasatka Bay</option>
+            </select>
+        </fieldset>
+
+        <textarea name="notes" rows="3" placeholder="Other Information in Markdown Format"></textarea>
+
+        <input type="Submit" value="Update">   
+
+        </form>
+    </article>
+
+</main>
+</body>
+</html>
+{{end}}

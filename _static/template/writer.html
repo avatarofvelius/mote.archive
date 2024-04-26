@@ -1,29 +1,43 @@
-{{ define "title" }} Template Title {{ end }}
+{{ define "title" }} Archive.Writer {{ end }}
 
 {{define "content"}}
 
-<br>
-<h2><center>Header</center></h2>
+<main class="container">
 
-<div class=".container">
-    <h4>Sub Heading Toolbar</h4>
-    <textarea class="text" name="text" rows="18" cols="50">
-        Begin Writing Here...
-    </textarea>
-</div>
-
-<div class=".container">
-    <h4>List of Docs</h4>
+<nav>
     <ul>
-        <li><a href="#" disabled>Document</a></li>
-        <li><a href="#" disabled>Document</a></li>
-        <li><a href="#" disabled>Document</a></li>
-        <li><a href="#" disabled>Document</a></li>
+        <li><strong>Archive</strong></li>
     </ul>
-</div>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Writer</a></li>
+        <li><a href="#">Books</a></li>
+        <li><a href="#">Characters</a></li>
+    </ul>
+</nav>
 
-<footer>
-    <p>Copyright | Sitemap </p>
-</footer>
+<hr>
 
+<form>
+    <textarea class="text" name="text" rows="16" cols="50" autofocus>
+        Begin Writing Here.
+    </textarea>
+    <br>
+    <fieldset role="group">
+        <input type="button" class="outline" name="open" value="Open">  
+        <input type="button" class="outline" name="save" value="Save">  
+        <input type="button" class="outline" name="backup" value="Backup"> 
+        <input type="button" class="outline" name="merge" value="Merge">
+    </fieldset>
+</form>
+
+    <h4>List of Unfinished Documents</h4>
+    <ul>
+        <li><a href="#">Document</a></li>
+        <li><a href="#">Document</a></li>
+        <li><a href="#">Document</a></li>
+        <li><a href="#">Document</a></li>
+    </ul>
+
+</main>
 {{end}}
