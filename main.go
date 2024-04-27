@@ -10,6 +10,7 @@ import (
 func main() {
 	http.HandleFunc("/", root)
 
+	http.HandleFunc("/content", contentHandler)
 	http.HandleFunc("/writer", writerHandler)
 	http.HandleFunc("/book", bookHandler)
 	http.HandleFunc("/character", characterHandler)
@@ -22,7 +23,6 @@ func main() {
 }
 
 // Unused
-
 /*
 	greeting()
 	http.HandleFunc("/json", getJSON)

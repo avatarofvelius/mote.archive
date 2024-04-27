@@ -6,8 +6,22 @@ import (
 	"net/http"
 )
 
+// Form Functions
+
+// Routes
+
 func root(w http.ResponseWriter, req *http.Request) {
 	fmt.Println("[:Dae-W:] :: 200 OK, Root Loaded.")
+}
+
+func contentHandler(w http.ResponseWriter, r *http.Request) {
+	tmpl, _ := template.ParseFiles(
+		"./_static/template/base.html",
+		"./_static/template/content.html",
+	)
+	tmpl.Execute(w, nil)
+
+	fmt.Println("[:Dae-W:] :: 200 OK, Writer Loaded.")
 }
 
 func writerHandler(w http.ResponseWriter, r *http.Request) {
@@ -27,7 +41,7 @@ func bookHandler(w http.ResponseWriter, r *http.Request) {
 	)
 	tmpl.Execute(w, nil)
 
-	fmt.Println("[:Dae-W:] :: 200 OK, Writer Loaded.")
+	fmt.Println("[:Dae-W:] :: 200 OK, Book Loaded.")
 }
 
 func characterHandler(w http.ResponseWriter, r *http.Request) {
@@ -37,7 +51,7 @@ func characterHandler(w http.ResponseWriter, r *http.Request) {
 	)
 	tmpl.Execute(w, nil)
 
-	fmt.Println("[:Dae-W:] :: 200 OK, Writer Loaded.")
+	fmt.Println("[:Dae-W:] :: 200 OK, Character Loaded.")
 }
 
 // Unused Functaions
