@@ -88,7 +88,7 @@ notes: notes.md
 	)
 	tmpl.Execute(w, &m)
 
-	fmt.Println("[:Dae-W:] :: 200 OK, Content Loaded.")
+	fmt.Println("[:Dae-W:] :: 200 OK, YAML Loaded.")
 }
 
 // Unused Functaions
