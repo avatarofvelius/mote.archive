@@ -1,12 +1,31 @@
 {{ define "title" }} Template Title {{ end }}
 
 {{define "content"}}
+    <center>Yaml Information</center>
+    <form>
+        {{ range $key, $value := . }}
+        <label>{{$key}}</label>
+        <input name="{{$key}}" value="{{$value}}" disabled>
+        {{ end }}
+        <button type="submit" disabled>submit</button>
+    </form>
+<!--
+<article>
+    <form>
+        {{ range $key, $value := . }}
+        <label>{{ $key }}<span> : {{ $value }}</span></label>
+        <input value="{{ $value }}" disabled>
+        {{ end }}
+    </form>
+</article>
 
-<br>
-<h2><center>Header</center></h2>
-<hr>
+    <form>
+        <fieldset>
+        {{ range $key, $value := . }}
 
-{{ .Alerts }}
-
-
+        <textarea name="{{$key}}" readonly>{{$value}}</textarea>
+        {{ end }}
+        </fieldset>
+    </form>
+-->
 {{end}}
