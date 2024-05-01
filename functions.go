@@ -84,7 +84,7 @@ notes: notes.md
 
 	tmpl, _ := template.ParseFiles(
 		"./_static/template/base.html",
-		"./_static/template/content.html",
+		"./_static/template/yaml.html",
 	)
 	tmpl.Execute(w, &m)
 
