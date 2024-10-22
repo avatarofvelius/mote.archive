@@ -1,13 +1,12 @@
 {{ define "title" }} Template Title {{ end }}
 
 {{define "content"}}
-    <center>Yaml Information</center>
     <form>
         {{ range $key, $value := . }}
         <label>{{$key}}</label>
         <input name="{{$key}}" value="{{$value}}" disabled>
         {{ end }}
-        <button type="submit" disabled>submit</button>
+        <button type="submit" disabled>Update</button>
     </form>
 <!--
 <article>

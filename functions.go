@@ -12,14 +12,15 @@ import (
 // Functions
 
 func greeting() {
-	fmt.Println("-----------------------------------------------------------")
+	fmt.Println("----------------------------------------------------")
 	fmt.Println("Welcome to the Archivist Mote.")
 	fmt.Println()
 	fmt.Println("[:http://Mote.Archive/:]")
-	fmt.Println("[:options:]   --   /home :: /motes :: /books :: /characters")
 	fmt.Println()
-	fmt.Println("[:Dae-W:] :: Okaeri Inaeri,")
-	fmt.Println("[:Dae-W:] :: Listening on Port 3000...")
+	fmt.Println("[:options:] -- /home : /motes : /books : /characters")
+	fmt.Println()
+	fmt.Println("[:Dae-W:]   -- :: Okaen Inae,")
+	fmt.Println("[:Dae-W:]   -- :: Listening on Port 3000...")
 }
 
 // Routes
@@ -49,20 +50,23 @@ func testyaml(w http.ResponseWriter, req *http.Request) {
 	var data = `
 character-id: cvb-564-86-Hybrid
 first-name: jhkl
-last-name: lhj
+
 gender: Female
 ethnicity: Danish
 portrait-path: b.jpg
-notes: notes.md	
+
 `
+	// last-name: lhj
+	// notes: notes.md
+
 	type T struct {
-		id        string `yaml:"character-id"`
-		first     string `yaml:"first-name"`
-		last      string `yaml:"last-name"`
+		id    string `yaml:"character-id"`
+		first string `yaml:"first-name"`
+		// last      string `yaml:"last-name"`
 		gender    string `yaml:"gender"`
 		ethnicity string `yaml:"ethnicity"`
 		portrait  string `yaml:"portrait-path"`
-		notes     string `yaml:"notes"`
+		// notes     string `yaml:"notes"`
 	}
 
 	t := T{}
